@@ -7,5 +7,5 @@
 
 *****
 ## 后端函数
-* 查看后端函数可访问[]*https://qingfuwu.cn/share/qckozf3fzeoxz58c9o*
+* 查看后端函数可访问*https://qingfuwu.cn/share/qckozf3fzeoxz58c9o*
 *****
