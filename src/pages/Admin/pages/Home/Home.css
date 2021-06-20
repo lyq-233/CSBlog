@@ -1,0 +1,17 @@
+.home-region-fan{
+    float: left;
+    width:46%;
+    margin-left:2%;
+    background-color: rgb(250, 241, 242,0.2);
+}
+.home-region-fan-title{
+    cursor: pointer;
+    display: inline-block;
+}
+.home-region-fan-body{
+    border-bottom: 1px solid rgba(156, 151, 151,0.1);
+}
+.home-region-fan-body:hover{
+    cursor: pointer;
+    background-color: rgba(235, 210, 165, 0.2);
+}

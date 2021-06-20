@@ -1,0 +1,90 @@
+.home-header{
+    background-color: #fcfcfc;
+    line-height: 50px;
+    height:50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-biaoti{
+    float:left;
+    font-size:25px;
+    color:red;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left:20px;
+    margin-right:10px;
+}
+.home-biaoti:hover{
+    cursor:pointer;
+}
+
+.home-nav {
+    float: left;
+}
+
+.home-nav ul {
+    list-style: none;
+}
+
+
+.home-nav ul li  {
+    float: left;
+    height: 50px;
+    padding: 0px 20px;
+    text-decoration: none;
+}
+.home-nav ul li span{
+    color:black;
+}
+
+.home-nav ul li:hover {
+    cursor: pointer;
+    border-bottom: 1px solid orange;
+    color: bisque;
+}
+.home-search{
+    float:left;
+    margin:10px;
+    margin-left:70px;
+    width:450px;
+}
+.search-button{
+    float:left;
+    margin:10px;
+}
+.home-nav-right{
+    float:left;
+}
+.avatar2{
+    float:left;
+    width:160px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.avatar2:hover{
+    cursor: pointer;
+}
+.avatar2 span{
+    margin-left: 5px;
+    font-size: 16px;
+    color:grey;
+}
+.badge-show{
+    background-color: white;
+    margin-left:-20px;
+    margin-top:-8px;
+    width: 80px;
+    box-shadow: 2px 2px 10px  rgba(0,0,0,0.3);
+}
+.badge-show >h3{
+    height: 30px;
+    padding-left: 10px;
+    line-height: 30px;
+    color:grey;
+}
+.badge-show >h3:hover{
+    background-color: rgba(240, 240, 245);
+}
+.site-badge-count .ant-badge-count{
+    background-color: orange;
+}

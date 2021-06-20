@@ -1,0 +1,10 @@
+.login-region-title{
+    font-size: 40px;
+    color:rgb(21,20,19);
+    text-align:center;
+    margin:10px auto;
+    border-bottom: 1px solid rgb(82, 39, 39);
+}
+.login-region-main{
+    margin:30px;
+}

@@ -1,0 +1,59 @@
+.comment-box-bd-tname{
+    line-height: 40px;
+    height:40px;
+    font-size: 20px;
+    margin-top:10px;
+    font-weight: 600;
+}
+.comment-box-bd-tname:hover{
+    cursor: pointer;
+    color:rgb(252, 85, 109);
+}
+.comment-box-bd-tname>div{
+    display: inline-block;
+    width: 900px;
+    line-height: 40px;
+    height:40px;
+    margin-left:20px;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+.comment-box-bd li{
+    /* 消除外边距合并 */
+    border-top:1px solid white;
+    border-bottom: 1px solid rgba(194, 191, 191,0.2);
+}
+.comment-box-bd li:hover{
+    background-color: rgba(196, 196, 201, 0.1);
+    cursor: pointer;
+}
+.comment-box-bd-content{
+    display: inline-block;
+    width: 800px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 17px;
+    color:grey;
+    padding-left: 20px;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+.comment-box-bd-time{
+    float:right;
+    line-height: 35px;
+    margin-right: 10px;
+    font-size: 15px;
+    color:grey
+}
+.comment-box-bd-delete{
+    float:right;
+    line-height: 35px;
+    margin-right: 10px;
+    font-size: 15px;
+    color:orange
+}
+.comment-box-bd-delete:hover{
+    color:orangered
+}

@@ -1,0 +1,15 @@
+.content-region{
+    position: relative;
+}
+.sanjiaoxing {
+    position: absolute;
+    /* 应该为border宽度的2倍  */
+    top: -27px;
+    left: 40px;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    border: 15px solid transparent;
+    border-bottom-color: rgb(240, 242, 245);
+}

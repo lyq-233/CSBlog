@@ -1,0 +1,55 @@
+.infor{
+    margin:20px;
+    height:94%;
+    width:96%;
+    background-color: white;
+    overflow: auto;
+}
+.info-jianjie{
+    float:left;
+    width:8%;
+    height: 100%;
+}
+.info-userinfo{
+    float:left;
+    width:92%;
+    height: 100%;
+}
+.info-region{
+    height:70px;
+    margin-right: 100px;
+    line-height :70px;
+    border-bottom: 1px solid rgba(141, 140, 124,0.2);
+}
+.avatar-region{
+    margin-top:20px;
+    padding-left: 15px;
+}
+.info-main{
+    display: inline-block;
+    margin-left:20px;
+    width:90%;
+}
+.info-text{
+    color:rgb(102, 102, 102);
+    margin-left:60px;
+}
+.info-bianji{
+    display: inline-block;
+    color:skyblue;
+}
+.avatar-shangchuan{
+    text-align: center;
+    display: inline-block;
+    width:50px;
+    border:1px solid rgb(207, 199, 199);
+}
+.avatar-shangchuan:hover{
+    cursor: pointer;
+    background-color: rgba(141, 140, 124,0.2);
+}
+.info-bianji:hover{
+    display: inline-block;
+    color:rgb(141, 140, 124);
+    cursor: pointer;
+}

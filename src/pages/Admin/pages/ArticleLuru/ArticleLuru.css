@@ -1,0 +1,10 @@
+.luru-card{
+    margin:20px;
+    height:94%;
+    width:96%;
+    background-color: white;
+    overflow: auto;
+}
+.submit-article-btn{
+    margin-left:44%;
+} 

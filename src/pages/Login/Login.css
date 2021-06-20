@@ -1,0 +1,36 @@
+.login{
+    width:100%;
+    height:100%;
+    background-image: url(https://sf1-ttcdn-tos.pstatp.com/obj/larkcloud-file-storage/baas/qckozf/b2fbb41bca92a2e7_1618726826540.jpg);
+    background-size:100% 100%;
+     /* 消除塌陷 */
+    overflow:hidden; 
+}
+.login-header{
+    height:80px;
+    line-height: 80px;
+    margin:0 auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 100px;
+    color: orange;
+    vertical-align:middle;
+}
+.login-header>span:hover{
+    font-size: 60px;
+}
+.login-region{
+    margin:0px auto;
+    margin-top:100px;
+    background-color: rgba(106, 106, 187,0.2);
+    width:400px;
+    /* 消除塌陷 */
+    overflow:hidden; 
+    box-shadow:0;
+    transition:box-shadow 0.5s;
+}
+.login-region:hover{
+    box-shadow:5px 5px 10px  rgba(0,0,0,0.3);
+}

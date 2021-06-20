@@ -1,0 +1,24 @@
+.fedbk-father {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: fixed;
+    right: 0px;
+    bottom: 130px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    color: orange;
+}
+.fedbk-son {
+    color:white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    line-height: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 120px;
+    height: 40px;
+    background-color: rgba(236, 161, 20, 0.7);
+    z-index: 1;
+}

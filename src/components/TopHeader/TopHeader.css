@@ -1,0 +1,49 @@
+.top-header{
+    height:64px;
+    position:relative;
+    background-color: white;
+}
+.biaoti{
+    display: inline-block;
+    font-size:25px;
+    color:red;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left:20px;
+}
+.biaoti:hover{
+    cursor:pointer;
+}
+.h-title{
+    display: inline-block;
+    width:150px;
+    color:rgb(141, 142, 138);
+    font-size: 17px;
+    margin-left:76px;
+}
+.huanying{
+   position:absolute;
+   display: inline-block;
+   overflow:hidden;
+   width:90px;
+   white-space:nowrap;
+   text-overflow:ellipsis;
+   left:88%;
+   color:black;
+}
+.avatar{
+    position: absolute;
+    display: inline-block;
+    left:95%;
+    z-index:1
+}
+
+
+.avatar:hover{
+    cursor: pointer;
+}
+
+.duihuakuang{
+    position: relative;
+    top:10px;
+    left:-68px;
+}

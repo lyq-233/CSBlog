@@ -1,0 +1,100 @@
+.blogtype-box-hd {
+    line-height: 60px;
+    height: 60px;
+    border-bottom: 1px solid rgba(221, 210, 210, 0.1);
+    border-top: 1px solid rgb(243, 243, 243);
+    margin-top:30px;
+}
+
+.blogtype-box-hd-icon{
+    float:left;
+    color:orange;
+    line-height: 50px;
+    height: 50px;
+    margin-left:20px;
+    font-size: 22px;
+}
+.blogtype-box-hd h3{
+    float:left;
+    height: 50px;
+    line-height: 50px;
+    font-size: 19px;
+    margin-left:10px;
+}
+.blogtype-box-bd{
+    height:275px;
+}
+
+.blogtype-box-bd li{
+    /* 消除外边距合并 */
+    border-top:1px solid white;
+}
+.blogtype-box-bd-tname{
+    line-height: 30px;
+    height:30px;
+    font-size: 20px;
+    margin-top:10px;
+    font-weight: 600;
+}
+.blogtype-box-bd-tname >div{
+    display: inline-block;
+    width: 900px;
+    line-height: 30px;
+    height:30px;
+    margin-left:20px;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+.blogtype-box-bd-content{
+    height:50px;
+    line-height: 50px;
+    margin-top:0px;
+    border-bottom: 1px solid rgb(243, 243, 243);
+}
+.blogtype-box-bd li:hover{
+    background-color: rgba(196, 196, 201, 0.1);
+    cursor: pointer;
+}
+.blogtype-box-bd li:hover .blogtype-box-bd-tname{
+    color:rgb(252, 85, 109);
+}
+.blogtype-box-bd-avatar{
+    float:left;
+    height:50px;
+    font-size: 17px;
+    line-height: 50px;
+    margin-left: 20px;
+}
+.blogtype-box-bd-info span{
+    color: rgb(252, 85, 109);
+    margin-right:5px;
+}
+.blogtype-box-bd-info{
+    float:right;
+    height:50px;
+}
+.blogtype-box-bd-info >div{
+    float:left;
+    margin:0 10px;
+}
+.blogtype-box-foot{
+    height:40px;
+    line-height: 40px;
+    margin-top:10px;
+}
+.blogtype-box-foot div{
+    float:right; 
+    color:grey;
+    font-size:15px;
+    margin-right:10px;
+}
+.blogtype-box-foot div:hover{
+    color:orange;
+    cursor: pointer;
+}
+.empty-blog{
+    margin-top:10px;
+    color:grey;
+}

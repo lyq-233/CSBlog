@@ -1,0 +1,21 @@
+const articletypelist = [
+    { value: 1, type: 'Python', path: 'pythoon', href: 'pythoon' },
+    { value: 2, type: 'Java', path: 'java', href: 'java' },
+    { value: 3, type: 'C/C++', path: 'c++', href: 'c' },
+    { value: 4, type: '移动开发', path: 'mobile', href: 'mobile' },
+    { value: 5, type: '数据库', path: 'database', href: 'database' },
+    { value: 6, type: '计算机基础', path: 'computerbasis', href: 'computerbasis' },
+    { value: 7, type: '物联网', path: 'wulianwang', href: 'wulianwang' },
+    { value: 8, type: '汇编', path: 'huibian', href: 'huibian' },
+    { value: 9, type: '前端', path: 'qianduan', href: 'qianduan' },
+    { value: 10, type: '后端', path: 'houduan', href: 'houduan' },
+    { value: 11, type: '区块链', path: 'qukuailian', href: 'qukuailian' },
+    { value: 12, type: '游戏开发', path: 'gamelauch', href: 'gamelauch' },
+    { value: 13, type: '5G', path: '5g', href: 'five-g' },
+    { value: 14, type: '信息安全', path: 'infosec', href: 'infosec' },
+    { value: 15, type: '嵌入式', path: 'qianrushi', href: 'qianrushi' },
+    { value: 16, type: '大数据', path: 'dashuju', href: 'dashuju' },
+    { value: 17, type: '云计算', path: 'yunjisuan', href: 'yunjisuan' },
+    { value: 18, type: '其他', path: 'qita', href: 'qita' },
+]
+export default articletypelist
