@@ -32,7 +32,7 @@ export default class ViewBlog extends Component {
         //console.log(result)
         if (result.err_code === 0) {
             const viewedblog = result.result[0]
-            //给评论组件传文章ID供 评论组件获取相应评论
+            //给评论组件传文章ID 供评论组件获取相应评论
             PubSub.publish('CID', viewedblog._id)
             const userinfo = result.result[1]
             viewedblog.createdAt = changeDateFormat(viewedblog.createdAt)
@@ -169,7 +169,7 @@ export default class ViewBlog extends Component {
         return (
             < div className="viewedblog-bgc" >
                 <HomepageHeader />
-                <div style={{ marginTop: '8px' }}>
+                <div className="viewblog-body" style={{ marginTop: '8px' }}>
                     <div className="viewblog-left">
                         <div className="viewblog-left-authorinfo">
                             <div className="viewblog-left-authorinfo-avatar">
@@ -238,7 +238,7 @@ export default class ViewBlog extends Component {
                                 </h1>
                             </div>
                             <div className="viewblog-right-commentarea clearfix">
-                                <div>
+                                <div style={{ width: '95%', float: 'left' }}>
                                     <CommentList addcomments={this.addcomments} commentee={viewedblog.nickname} commenteename={viewedblog.author} />
                                 </div>
                             </div>

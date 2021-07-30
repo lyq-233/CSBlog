@@ -16,7 +16,7 @@ export default class Homepage extends Component {
     }
     render() {
         return (
-            <div style={{ backgroundColor: 'rgb(246, 246, 246)', minHeight: '100%' }}>
+            <div style={{ width:'100%',backgroundColor: 'rgb(246, 246, 246)', minHeight: '100%' }}>
                 <HomepageHeader />
                 <HomepageNav />
                 <HomepageMain />

@@ -117,7 +117,7 @@ class CommentList extends Component {
         const { comments, submitting, value } = this.state;
 
         return (
-            <>
+            < >
                 {comments.length > 0 && <Commentlist comments={comments} />}
                 <Comment
                     avatar={

@@ -75,7 +75,9 @@ export default class ArticleLuru extends Component {
     validateKey = (rule, value, callback) => {
         if (value.trim().split(/\s+/).length > 5) {
             return Promise.reject('最多5个关键字')
-        } else {
+        } else if(value.trim().split(/\s+/).length < 2){
+            return Promise.reject('最少2个关键字')
+        }else {
             return Promise.resolve() //验证通过
         }
     }

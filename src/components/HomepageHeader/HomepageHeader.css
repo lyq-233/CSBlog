@@ -1,34 +1,45 @@
 .home-header{
+    display: flex;
     background-color: #fcfcfc;
     line-height: 50px;
     height:50px;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+.home-header > .item{
     display: flex;
-    justify-content: space-between;
+    flex:0 1 auto
+}
+.home-header > .item:nth-of-type(1){
+    width:20%
+}
+.home-header > .item:nth-of-type(2){
+    width:30%
+}
+.home-header > .item:nth-of-type(3){
+    width:30%
 }
 
 .home-biaoti{
-    float:left;
     font-size:25px;
     color:red;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-left:20px;
     margin-right:10px;
 }
+
 .home-biaoti:hover{
     cursor:pointer;
 }
 
-.home-nav {
-    float: left;
-}
-
 .home-nav ul {
+    display: flex;
     list-style: none;
 }
 
-
 .home-nav ul li  {
-    float: left;
+    white-space: nowrap;
     height: 50px;
     padding: 0px 20px;
     text-decoration: none;
@@ -40,10 +51,8 @@
 .home-nav ul li:hover {
     cursor: pointer;
     border-bottom: 1px solid orange;
-    color: bisque;
 }
 .home-search{
-    float:left;
     margin:10px;
     margin-left:70px;
     width:450px;
@@ -56,10 +65,7 @@
     float:left;
 }
 .avatar2{
-    float:left;
     width:160px;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 .avatar2:hover{
     cursor: pointer;
@@ -70,6 +76,8 @@
     color:grey;
 }
 .badge-show{
+    position: relative;
+    z-index: 1;
     background-color: white;
     margin-left:-20px;
     margin-top:-8px;

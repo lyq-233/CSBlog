@@ -14,7 +14,7 @@ class HomepageNav extends Component {
 
     render() {
         return (
-            <div className="homepage-topnav">
+            <div className="homepage-topnav"> 
                 <div className="homepage-topnav-left">
                     <div className="homepage-topnav-left-obj">
                         <div onClick={() => this.props.history.go(0)} style={{ borderRight: '2px solid red' }}  >

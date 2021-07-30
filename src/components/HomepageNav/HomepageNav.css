@@ -1,16 +1,16 @@
 .homepage-topnav{
-    width:1200px;
+    display: flex;
+    width:79%;
     height:70px;
     margin:10px auto;
     background-color: white;
 }
 .homepage-topnav-left{
-    float:left;
-    width:300px;
+    display: flex;
+    width:20%;
     height:70px;
 }
 .homepage-topnav-left-obj{
-    float:left;
     text-align: center;
     padding-top:10px;
     height:70px;
@@ -22,14 +22,15 @@
     cursor: pointer;
 }
 .homepage-topnav-right{
-    float: left;
-    width:900px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 80%;
 }
 .homepage-topnav-right-obj{
     text-align: center;
     line-height: 35px;
-    float:left;
-    width:100px;
+    width:11%;
     height:35px;
     color:grey;
 }

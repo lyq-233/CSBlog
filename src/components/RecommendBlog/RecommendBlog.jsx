@@ -6,7 +6,7 @@ import { Spin } from 'antd';
 import { ThunderboltTwoTone, SyncOutlined, EyeTwoTone, LikeTwoTone, LoadingOutlined } from '@ant-design/icons';
 import './RecommendBlog.css'
 
-
+ 
 class RecommendBlog extends Component {
     state = {
         change_spinning: false,

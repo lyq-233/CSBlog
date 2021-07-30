@@ -6,7 +6,7 @@ export default class HomepageMain extends Component {
 
     render() {
         return (
-            <div className="homepage-main clearfix">
+            <div className="homepage-main clearfix"> 
                 <RecommendBlog />
                 <BlogsMain />
             </div>
