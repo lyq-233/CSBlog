@@ -7,23 +7,48 @@
     overflow:hidden; 
 }
 .login-header{
-    height:80px;
-    line-height: 80px;
-    margin:0 auto;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 40px;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 100px;
+    display: flex;
+    flex-flow:row nowrap ;
+    justify-content: space-around;
+    width: 400px;
+    height: 200px;
     color: orange;
-    vertical-align:middle;
+    margin: 0px auto;
 }
-.login-header>span:hover{
-    font-size: 60px;
+.login-header > div{
+    flex:0 1 auto;
+    font-size: 30px;
+    animation: fall 1s .5s 1 normal both;
+    transition: 1s;
 }
+.login-header > div:hover{
+    transform: rotateY(180deg);
+}
+
+.login-header > div.box2 {
+    animation-delay: .6s;
+}
+
+.login-header >div.box3 {
+    animation-delay: .7s;
+}
+
+.login-header >div.box4 {
+    animation-delay: .8s;
+}
+
+.login-header >div.box5 {
+    animation-delay: .9s;
+}
+
+.login-header >div.box6 {
+    animation-delay: 1s;
+}
+
+
 .login-region{
     margin:0px auto;
-    margin-top:100px;
+    margin-top:10px;
     background-color: rgba(106, 106, 187,0.2);
     width:400px;
     /* 消除塌陷 */
@@ -33,4 +58,38 @@
 }
 .login-region:hover{
     box-shadow:5px 5px 10px  rgba(0,0,0,0.3);
+}
+   /* 创建小球下落的动画 */
+   @keyframes fall {
+    from {
+        margin-top: -200px;
+        font-size: 0px;
+        animation-timing-function: ease-in;
+    }
+
+
+    30%{
+        margin-top: 140px;
+        font-size: 35px;
+        animation-timing-function: ease-out;
+    }
+    60%{
+        margin-top: 70px;
+        font-size: 20px;
+        animation-timing-function: ease-in;
+    }
+    80%{
+        margin-top: 140px;
+        font-size: 35px;
+        animation-timing-function: ease-out;
+    }
+    90%{
+        margin-top:110px;
+        font-size: 30px;
+        animation-timing-function: ease-in;
+    }
+    to {
+        margin-top: 140px;
+        font-size: 35px;
+    }
 }

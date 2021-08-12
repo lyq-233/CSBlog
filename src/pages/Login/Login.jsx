@@ -12,7 +12,12 @@ export default class Login extends Component {
         return (
             <div className="login">
                 <div className="login-header">
-                    <span>C</span> <span>S</span> <span>B</span> <span>l</span> <span>o</span> <span>g</span>
+                    <div className="box1">C</div>
+                    <div className="box2">S</div>
+                    <div className="box3">B</div>
+                    <div className="box4">l</div>
+                    <div className="box5">o</div>
+                    <div className="box6">g</div>
                 </div>
                 <div className="login-region">
                     <Switch>
