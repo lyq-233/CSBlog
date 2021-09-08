@@ -3,7 +3,7 @@
 
 ## 启动项目
 * 此项目已经通过轻服务部署完成可直接用浏览器打开运行,可访问：  
-*https://s6-lc.thelarkcloud.com/obj/larkcloud-mgcloud/baas/qckozf/95653513b37f4603_1627653738540.html#/*
+*https://sf1-ttcdn-tos.pstatp.com/obj/larkcloud-file-storage/baas/qckozf/15512a03f10dfa71_1631082923021.html#/login/log*
 
 *****
 ## 后端函数
