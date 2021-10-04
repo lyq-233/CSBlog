@@ -38,10 +38,9 @@
 }
 .blogtype-box-bd-tname >div{
     display: inline-block;
-    width: 900px;
     line-height: 30px;
     height:30px;
-    margin-left:20px;
+    padding-left:20px;
     white-space:nowrap;
     overflow: hidden;
     text-overflow:ellipsis;
@@ -65,7 +64,7 @@
     height:50px;
     font-size: 17px;
     line-height: 50px;
-    margin-left: 20px;
+    padding-left: 20px;
 }
 .blogtype-box-bd-info span{
     color: rgb(252, 85, 109);

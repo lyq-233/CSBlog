@@ -1,0 +1,43 @@
+.verify-all {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(132, 132, 132, 0.5);
+}
+
+.verify-box {
+    width: 400px;
+    height: 450px;
+    background-color: white;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10vh;
+    box-shadow: 0px 0px 5px 3px rgba(34, 33, 33, .2);
+}
+
+.verify-box h1 {
+    font-size: large;
+    line-height: 50px;
+    text-align: center;
+    height: 50px;
+}
+
+.verify-container {
+    position: relative;
+}
+
+.verify-big {
+    width: 400px;
+    height: 400px;
+}
+
+.verify-small {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 1px solid rgba(47, 221, 47, 0.2);
+}

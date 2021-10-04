@@ -4,18 +4,32 @@ import store from '../../utils/storageUtils.js'
 import { Layout } from 'antd';
 import TopHeader from '../../components/TopHeader/TopHeader.jsx'
 import LeftNav from '../../components/LeftNav/LeftNav.jsx'
+
 import ArticleList from './pages/ArticleList/ArticleList.jsx'
 import ArticleLuru from './pages/ArticleLuru/ArticleLuru.jsx'
 import InfoChange from './pages/InfoChange/InfoChange.jsx'
 import MyCollect from './pages/MyCollect/MyCollect.jsx'
-import Home from './pages/Home/Home.jsx'
 import GoodList from './pages/GoodList/GoodList.jsx'
 import BadList from './pages/BadList/BadList.jsx'
 import CommentList from './pages/CommentList/CommentList.jsx'
 import FanList from './pages/FanList/FanList.jsx'
 import GiveAdvise from './pages/GiveAdvise/GiveAdvise.jsx'
+import Home from './pages/Home/Home.jsx'
 
 import './Admin.css'
+
+// const Home = lazy(() => import('./pages/Home/Home'))
+// const ArticleList = lazy(() => import('./pages/ArticleList/ArticleList'))
+// const ArticleLuru = lazy(() => import('./pages/ArticleLuru/ArticleLuru'))
+// const InfoChange = lazy(() => import('./pages/InfoChange/InfoChange'))
+// const MyCollect = lazy(() => import('./pages/MyCollect/MyCollect'))
+// const GoodList = lazy(() => import('./pages/GoodList/GoodList'))
+// const BadList = lazy(() => import('./pages/BadList/BadList'))
+// const CommentList = lazy(() => import('./pages/CommentList/CommentList'))
+// const FanList = lazy(() => import('./pages/FanList/FanList'))
+// const GiveAdvise = lazy(() => import('./pages/GiveAdvise/GiveAdvise'))
+
+
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -33,6 +47,7 @@ export default class Admin extends Component {
                         <Sider style={{ backgroundColor: 'white' }}><LeftNav /></Sider>
                         <Content className="content-region">
                             <div className="sanjiaoxing"></div>
+                            {/* <Suspense fallback={'正在加载'}> */}
                             <Switch>
                                 <Route path='/admin/home' component={Home} />
                                 <Route path='/admin/list' component={ArticleList} />
@@ -46,6 +61,7 @@ export default class Admin extends Component {
                                 <Route path='/admin/advise' component={GiveAdvise} />
                                 <Redirect to='/admin/home' />
                             </Switch>
+                            {/* </Suspense> */}
                         </Content>
                     </Layout>
                     <Footer style={{ textAlign: 'center', color: 'grey', backgroundColor: 'white' }}>推荐使用Chrome浏览器打开</Footer>

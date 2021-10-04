@@ -75,9 +75,9 @@ export default class ArticleLuru extends Component {
     validateKey = (rule, value, callback) => {
         if (value.trim().split(/\s+/).length > 5) {
             return Promise.reject('最多5个关键字')
-        } else if(value.trim().split(/\s+/).length < 2){
+        } else if (value.trim().split(/\s+/).length < 2) {
             return Promise.reject('最少2个关键字')
-        }else {
+        } else {
             return Promise.resolve() //验证通过
         }
     }
@@ -85,7 +85,7 @@ export default class ArticleLuru extends Component {
     render() {
         const { title_name, type, content, keyword, title_img } = this.state.toEditArticle
         return (
-            <Card headStyle={{ color: 'orange', fontSize: "17px" }} title={this.state.title} className="luru-card" >
+            <Card headStyle={{ color: 'orange', fontSize: "17px" }} title={this.state.title} className="card" >
                 <Form
                     ref={this.formRef}
                     name="submitarticle"

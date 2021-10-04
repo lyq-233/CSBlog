@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import BlogsTypeSelect from '../BlogsTypeSelect/BlogsTypeSelect.jsx'
 import articletypelist from '../../config/articleTypeConfig.js'
 import { getThreeGoodArt } from '../../api/index.js'
@@ -31,13 +31,13 @@ export default class BlogsMain extends Component {
     render() {
         const { spinning, threeGoodBlogByType } = this.state
         return (
-            <div>
+            <Fragment>
                 {
                     articletypelist.map((typeObj, index) => {
                         return <BlogsTypeSelect key={index} path={typeObj.path} href={typeObj.href} spinning={spinning} type={typeObj.type} neededBlog={threeGoodBlogByType[index]} />
                     })
                 }
-            </div>
+            </Fragment>
         )
     }
 }

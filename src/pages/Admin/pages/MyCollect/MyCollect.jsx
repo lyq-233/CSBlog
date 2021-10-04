@@ -26,7 +26,7 @@ export default class MyCollect extends Component {
                     <ul className="clearfix">
                         {
                             collectblogs.map((blogObj, index) => {
-                                return (
+                                return blogObj ? (
                                     <li key={`${blogObj._id}`} onClick={() => { this.props.history.push(`/viewblog/${blogObj._id}`) }}>
                                         <div className="blogtype-box-bd-tname">
                                             <span>{blogObj.title_name}</span>
@@ -43,7 +43,7 @@ export default class MyCollect extends Component {
                                             </div>
                                         </div>
                                     </li>
-                                )
+                                ) : ""
                             })
                         }
                     </ul>

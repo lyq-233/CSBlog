@@ -61,9 +61,9 @@ class HomepageHeader extends Component {
                         </ul>
                     </div>
                 </div>
-                <div className="item"> 
+                <div className="item">
                     <div className="home-search">
-                        <Form ref={this.searchRef} name="search-form" > 
+                        <Form ref={this.searchRef} name="search-form" >
                             <Form.Item
                                 name="search"
                                 rules={[
@@ -82,7 +82,7 @@ class HomepageHeader extends Component {
                 </div>
 
                 <div className="item">
-                    <div className="home-nav"> 
+                    <div className="home-nav">
                         <ul>
                             <Link to='/admin/mycollect' ><li><span>我的收藏</span></li></Link>
                             <Link to='/admin/luru/input' ><li style={{ color: 'black' }}>创作</li></Link>
@@ -100,9 +100,8 @@ class HomepageHeader extends Component {
                     </div>
 
                     <div onMouseOver={this.showSquare} onMouseOut={this.hideSquare} className="avatar2">
-                        <div style={{display:'flex', marginLeft: '50px' }}>
-                            <Avatar style={{marginTop:'10px'}} icon={<UserOutlined />} onClick={() => this.props.history.push('/admin/home')} src={store.getUser().avatar} />
-                            <span style={{whiteSpace:'nowrap'}}>{flag ? '' : '请先登录'}</span>
+                        <div style={{ display: 'flex', marginLeft: '51px' }}>
+                            <Avatar style={{ marginTop: '10px' }} icon={<UserOutlined />} onClick={() => this.props.history.push('/admin/home')} src={store.getUser().avatar} />
                         </div>
 
                         <div style={{ display: this.state.show }}>

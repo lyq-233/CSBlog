@@ -5,6 +5,19 @@ export default class ReturnToTop extends Component {
     gotoTop = () => {
         document.querySelector('#mainpage-top').scrollIntoView(true);
     }
+    //节流
+    throttle = (fn, delay) => {
+        let flg = true
+        return function () {
+            if (flg) {
+                flg = false
+                setTimeout(() => {
+                    fn()
+                    flg = true
+                }, delay)
+            }
+        }
+    }
     handleShow = () => {
         if (window.scrollY > 800) {
             this.setState({ showgotoTop: 'block' })
@@ -14,7 +27,7 @@ export default class ReturnToTop extends Component {
         }
     }
     componentDidMount() {
-        window.addEventListener('scroll', this.handleShow)
+        window.addEventListener('scroll', this.throttle(this.handleShow, 300))
     }
     componentWillUnmount() {
         this.setState = (state, callback) => {

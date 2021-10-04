@@ -1,3 +1,10 @@
+.card{
+    background-color: white;
+    margin:20px;
+    height:94%;
+    width:96%;
+    overflow: auto;
+}
 .home-region-fan{
     float: left;
     width:46%;

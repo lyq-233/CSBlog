@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { getRecommendedArt } from '../../api/index.js'
 import { withRouter } from 'react-router-dom'
 // import store from '../../utils/storageUtils.js'
@@ -6,7 +6,7 @@ import { Spin } from 'antd';
 import { ThunderboltTwoTone, SyncOutlined, EyeTwoTone, LikeTwoTone, LoadingOutlined } from '@ant-design/icons';
 import './RecommendBlog.css'
 
- 
+
 class RecommendBlog extends Component {
     state = {
         change_spinning: false,
@@ -45,7 +45,7 @@ class RecommendBlog extends Component {
         const showedrecblogs = recommendBlogList.slice(0, 4);
         //console.log(showedrecblogs)
         return (
-            <div>
+            <Fragment>
                 <div className="homepage-box-hd">
                     <div className="recommend-icon"><ThunderboltTwoTone twoToneColor="orange" /></div>
                     <h3>推荐博客</h3>
@@ -79,7 +79,7 @@ class RecommendBlog extends Component {
                         </ul>
                     </Spin>
                 </div>
-            </div>
+            </Fragment>
         )
     }
 }

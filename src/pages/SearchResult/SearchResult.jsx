@@ -44,6 +44,10 @@ export default class SearchResult extends Component {
     }
 
     componentDidMount() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
         this.setState({ search_content: this.getTypefromPath() }, () => {
             this.getblogs()
         });

@@ -6,31 +6,50 @@ import { Form, Input, Button, message, Spin } from 'antd';
 
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import store from '../../utils/storageUtils.js'
+import PubSub from 'pubsub-js'
+import {
+    succeed,
+    fail,
+    move,
+    reset
+} from '../../redux/actions/verifylogin'
+import { show, offshow } from '../../redux/actions/showverify'
+//引入connect用于连接UI组件与redux
+import { connect } from 'react-redux'
 
 import './NormalLoginForm.css'
 
 
-export default class NormalLoginForm extends Component {
+class NormalLoginForm extends Component {
     state = { showloading: false }
 
-    onFinish = async (values) => {
-        //console.log('Received values of form: ', values);
-        const { nickname, password } = values
-        this.setState({ showloading: true })
-        const result = await reqLogin(nickname, password)
-        //console.log(result)
-        if (result.err_code === 0) {
-            this.setState({ showloading: false })
-            // 提示登录成功
-            message.success('登录成功', 2)
-            //在本地存储中存储用户信息
-            store.saveUser(result.user)
-            //跳转到主页面
-            this.props.jumpToHomepage()
-        } else {
-            this.setState({ showloading: false })
-            message.error('用户名或密码错误')
-        }
+    onFinish = (values) => {
+        this.props.show()
+        var that = this
+        const { succeed, offshow, reset } = this.props
+        PubSub.subscribe('verify', function (data) {
+            PubSub.unsubscribe('verify')
+            succeed()
+            setTimeout(async () => {
+                reset()
+                offshow()
+                const { nickname, password } = values
+                that.setState({ showloading: true })
+                const result = await reqLogin(nickname, password)
+                if (result.err_code === 0) {
+                    that.setState({ showloading: false })
+                    // 提示登录成功
+                    message.success('登录成功', 2)
+                    //在本地存储中存储用户信息
+                    store.saveUser(result.user)
+                    //跳转到主页面
+                    that.props.jumpToHomepage()
+                } else {
+                    that.setState({ showloading: false })
+                    message.error('用户名或密码错误')
+                }
+            }, 300)
+        });
     };
     validateNick = (rule, value, callback) => {
         if (!/^[0-9a-zA-Z_]+$/.test(value)) {
@@ -42,6 +61,9 @@ export default class NormalLoginForm extends Component {
         } else {
             return Promise.resolve() //验证通过
         }
+    }
+    componentWillUnmount() {
+        PubSub.unsubscribe('verify')
     }
     render() {
         return (
@@ -97,3 +119,11 @@ export default class NormalLoginForm extends Component {
         );
     }
 }
+
+//使用connect()()创建并暴露一个容器组件
+export default connect(
+    state => ({
+        ifshow: state.ifshow
+    }),
+    { succeed, fail, move, reset, show, offshow }
+)(NormalLoginForm)

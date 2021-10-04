@@ -70,11 +70,7 @@
 .avatar2:hover{
     cursor: pointer;
 }
-.avatar2 span{
-    margin-left: 5px;
-    font-size: 16px;
-    color:grey;
-}
+
 .badge-show{
     position: relative;
     z-index: 1;

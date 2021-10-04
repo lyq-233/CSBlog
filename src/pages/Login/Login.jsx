@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import './Login.css'
 import { Route, Switch, Redirect } from 'react-router-dom'
 
+import VerifyLogin from '../../containers/VerifyLogin/VerifyLogin.jsx'
 import Log from './pages/Log/Log.jsx'
 import Register from './pages/Register/Register.jsx'
 
@@ -26,6 +27,7 @@ export default class Login extends Component {
                         <Redirect to='/login/log' />
                     </Switch>
                 </div>
+                <VerifyLogin />
             </div >
         )
 
