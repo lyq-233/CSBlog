@@ -1,8 +1,7 @@
 .gototop{
     position:fixed;
     bottom:100px;
-    left:50%;
-    margin-left:600px;
+    left:89.5%;
     color:grey;
 }
 .gototop:hover{

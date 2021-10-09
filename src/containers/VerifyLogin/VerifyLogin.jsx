@@ -15,8 +15,8 @@ import './VerifyLogin.css'
 class VerifyLogin extends Component {
     move = (e) => {
         const { fail, move } = this.props
-        const dv = document.querySelector('.verify-box')
-        const sm = document.querySelector('.verify-small')
+        const dv = this.dv
+        const sm = this.sm
         const bigLeft = dv.offsetLeft
         const bigTop = dv.offsetTop
         const smLeft = e.pageX - bigLeft - sm.offsetLeft
@@ -25,6 +25,19 @@ class VerifyLogin extends Component {
         function moving(ev) {
             let left = ev.pageX - bigLeft - smLeft + 'px'
             let top = ev.pageY - bigTop - smTop + 'px'
+
+            let width = parseInt(getComputedStyle(dv).width) - parseInt(getComputedStyle(sm).width)
+            let height = parseInt(getComputedStyle(dv).height) - 50 - parseInt(getComputedStyle(sm).height)
+            if (ev.pageX - bigLeft - smLeft < 0) {
+                left = 0 + 'px'
+            } else if (ev.pageX - bigLeft - smLeft > width) {
+                left = width + 'px'
+            }
+            if (ev.pageY - bigTop - smTop < 0) {
+                top = 0 + 'px'
+            } else if (ev.pageY - bigTop - smTop > height) {
+                top = height + 'px'
+            }
             move({ top: top, left: left })
         }
         document.addEventListener('mousemove', moving, false)
@@ -43,11 +56,12 @@ class VerifyLogin extends Component {
         return (
             <Fragment>
                 <div className="verify-all" style={{ visibility: ifshow }}>
-                    <div className="verify-box">
+                    <div className="verify-box" ref={e => (this.dv = e)}>
                         <h1 className="verify-title" style={{ color: verify.color }}>{verify.text}</h1>
                         <div className="verify-container">
                             <img className="verify-big" draggable="false" src={require('../../imgs/big.png').default} alt="" />
                             <img className="verify-small"
+                                ref={e => (this.sm = e)}
                                 style={{ left: verify.left, top: verify.top }}
                                 onMouseDown={this.move}
                                 draggable="false"
